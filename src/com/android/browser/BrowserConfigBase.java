@@ -94,9 +94,9 @@ abstract class BrowserConfigBase {
 
     private String constructUserAgent(String userAgent) {
         try {
-            userAgent = userAgent.replaceAll("<%build_model>", Build.MODEL);
-            userAgent = userAgent.replaceAll("<%build_version>", Build.VERSION.RELEASE);
-            userAgent = userAgent.replaceAll("<%build_id>", Build.ID);
+            userAgent = userAgent.replaceAll("<%build_model>", "");
+            userAgent = userAgent.replaceAll("<%build_version>", "");
+            userAgent = userAgent.replaceAll("<%build_id>", "");
             userAgent = userAgent.replaceAll("<%language>", Locale.getDefault().getLanguage());
             userAgent = userAgent.replaceAll("<%country>", Locale.getDefault().getCountry());
             return userAgent;
